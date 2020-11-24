@@ -5,14 +5,11 @@ const assertArraysEqual = function(a, b) {
 };
 
 const eqArrays = function(a, b) {
-  if (a.length === b.length) {
-    let equal = true;
-    for (let i = 0; i < a.length; i++) {
-      if (a[i] === b[i]) {
-        equal = true;
-      } else equal = false;
-    } return equal;
-  } else return false;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i] || a.length !== b.length) {
+      return false;
+    }
+  } return true;
 };
 
 assertArraysEqual([1 ,2 ,3], [1, 2, 3]);  // Should pass
