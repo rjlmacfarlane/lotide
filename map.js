@@ -29,5 +29,4 @@ const results1 = map(words1, word => word[0]); // [g, c, t, m, t]
 // Test code:
 assertArraysEqual([ 'g', 'c', 't', 'm', 't' ], results); // Should pass
 assertArraysEqual([ 'g', 'C', 't', 'M', 't' ], results); // Should fail
-
 assertArraysEqual(results, results1); // Should pass
