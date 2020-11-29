@@ -18,13 +18,17 @@ const eqObjects = function(object1, object2) {
       if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
         if (!eqArrays(object1[key], object2[key])) {
           return false;
-        }
+        } else return true;
+      }
+      if (object1[key] !== object2[key]) {
+        return false;
       }
     }
-  } else {
-    return false;
-  } return true;
+    return true;
+  }
+  return false;
 };
+
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };

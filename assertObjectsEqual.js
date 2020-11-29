@@ -40,4 +40,3 @@ assertObjectsEqual({ b: "2"}, { a: "4", b: "2"}); // Should fail
 assertObjectsEqual({ a: "4", b: ["2"]}, { a: "4", b: "2"}); // Should fail
 assertObjectsEqual({ a: "4", b: "2"}, { a: "4", b: "2"}); // Should pass
 assertObjectsEqual({ a: "4", b: ["2"]}, { a: "4", b: ["2"]}); // Should pass
-// assertObjectsEqual({ a: {c: ["2", "4"]}, b: ["2"]}, { a: {c: ["2", "4"]}, b: ["2"]}); // Should pass (I might be getting ahead of myself with this one... will revisit later)
