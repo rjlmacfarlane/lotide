@@ -1,0 +1,27 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "A bare-bones Lodash clone (curriculum @ Lighthouse Labs)",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjlmacfarlane/lotide.git"
+  },
+  "author": "Ryan MacFarlane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjlmacfarlane/lotide/issues"
+  },
+  "homepage": "https://github.com/rjlmacfarlane/lotide#readme"
+}
