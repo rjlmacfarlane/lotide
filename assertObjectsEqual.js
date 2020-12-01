@@ -1,27 +1,5 @@
-const eqObjects = function(object1, object2) {
-  if (Object.keys(object1).length === Object.keys(object2).length) {
-    for (let key of Object.keys(object1)) {
-      if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-        if (!eqArrays(object1[key], object2[key])) {
-          return false;
-        } else return true;
-      }
-      if (object1[key] !== object2[key]) {
-        return false;
-      }
-    }
-    return true;
-  }
-  return false;
-};
-
-const eqArrays = function(a, b) {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i] || a.length !== b.length) {
-      return false;
-    }
-  } return true;
-};
+// Note: Pair-programmed with @Bee (November 23, 2020 Cohort)
+const eqObjects = require("./eqObjects");
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
@@ -33,12 +11,3 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 module.exports = assertObjectsEqual;
-
-// TEST CODE:
-// const ab = { a: "4", b: "2"};
-// const ba = { b: "2", a: "1"};
-// assertObjectsEqual(ab, ba); // Should fail
-// assertObjectsEqual({ b: "2"}, { a: "4", b: "2"}); // Should fail
-// assertObjectsEqual({ a: "4", b: ["2"]}, { a: "4", b: "2"}); // Should fail
-// assertObjectsEqual({ a: "4", b: "2"}, { a: "4", b: "2"}); // Should pass
-// assertObjectsEqual({ a: "4", b: ["2"]}, { a: "4", b: ["2"]}); // Should pass
